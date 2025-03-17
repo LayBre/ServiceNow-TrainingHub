@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="da4f429dc35ca2108967b2ddd4013109" label="Courses" max_length="40" name="x_1634014_traini_0_courses" type="collection">
-        <element choice="3" label="Integration State" max_length="40" name="integration_state" type="choice">
+        <element choice="3" default="1" label="Integration State" max_length="40" name="integration_state" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Integrating" sequence="1" value="2"/>
                 <element inactive_on_update="false" label="Start" sequence="0" value="1"/>

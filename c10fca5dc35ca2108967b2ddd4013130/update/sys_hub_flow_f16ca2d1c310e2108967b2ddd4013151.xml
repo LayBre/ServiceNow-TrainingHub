@@ -16,7 +16,7 @@
         <flow_priority>MEDIUM</flow_priority>
         <generation_source/>
         <internal_name>course_flow</internal_name>
-        <label_cache>[]</label_cache>
+        <label_cache>[{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛Courses Record","reference":"x_1634014_traini_0_courses","reference_display":"Courses","type":"reference","base_type":"reference","usedInstances":{"a727ffb5-33df-41f6-9a80-e7ef101a4f78":["record"]},"attributes":{}},{"name":"flow_variable.active","label":"Flow Variables➛Active","reference":"","reference_display":"","type":"boolean","base_type":"boolean","column_name":"","choices":[],"usedInstances":{"72b3f7c5-90ad-455a-bd69-772fe4209ebd":["condition"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"3e2a30c4-370a-47b5-85a1-dcfdfa002f42"}},{"name":"Created or Updated_1.current.description","label":"Trigger - Record Created or Updated➛Courses Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"x_1634014_traini_0_courses","column_name":"description","usedInstances":{"41533cff-f76b-4361-b09c-3cfe310c5cd1":["description"]}},{"name":"41533cff-f76b-4361-b09c-3cfe310c5cd1.__action_status__.code","label":"7 - Translated API Integration➛Action Status➛Code","reference":"","reference_display":"Code","type":"integer","base_type":"integer","usedInstances":{"8292a547-f608-4f34-ac71-9fab4ae84858":["condition"]},"attributes":{}}]</label_cache>
         <latest_snapshot/>
         <master_snapshot/>
         <master_snapshot_digest/>
@@ -38,7 +38,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f16ca2d1c310e2108967b2ddd4013151</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Course Flow</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Hub" source="x_1634014_traini_0">c10fca5dc35ca2108967b2ddd4013130</sys_package>
@@ -46,7 +46,7 @@
         <sys_scope display_value="Training Hub">c10fca5dc35ca2108967b2ddd4013130</sys_scope>
         <sys_update_name>sys_hub_flow_f16ca2d1c310e2108967b2ddd4013151</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-03-14 17:05:05</sys_updated_on>
+        <sys_updated_on>2025-03-17 20:01:25</sys_updated_on>
         <type>flow</type>
         <version>2</version>
     </sys_hub_flow>
@@ -364,11 +364,652 @@
         <trigger_outputs/>
         <trigger_type>record_create_or_update</trigger_type>
     </sys_hub_trigger_instance_v2>
-    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=f16ca2d1c310e2108967b2ddd4013151"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=f16ca2d1c310e2108967b2ddd4013151^sys_idNOT IN5c03f212c3dce6108967b2ddd40131fb,63a47a92c3dce6108967b2ddd4013139"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Course Flow">f16ca2d1c310e2108967b2ddd4013151</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-17 19:54:05</sys_created_on>
+        <sys_id>5c03f212c3dce6108967b2ddd40131fb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Training Hub">c10fca5dc35ca2108967b2ddd4013130</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-17 19:54:05</sys_updated_on>
+        <ui_id>a727ffb5-33df-41f6-9a80-e7ef101a4f78</ui_id>
+        <values>H4sIAAAAAAAA/+1UUWvbMBD+K8HPxthxGtq8jYZAH9ZCt/Wl64QsXRyBLHmSnCYL+e872bKbtlsXSmAM5ifrTvfd950+6X4XCR7NognwNLvIpizP8nycpuPzSVZM8yIb85wCZFEcKVoB7jTAtOG4XlPZ+MBud2mAOuAjbUZfau5/SZawxhhQbr/HrVzYWtLtXajACFsJyTEfze4f4qimBsEdmGi2e5Fy2xqIpAVILJxr1lQIOrqaI8axxPvq2575SyW+B655QCfCBzHl+WRpHMHGgeKA7ZZUWoijiiqUqc02mjnTYAAHwG+U3A47VkK5TmlFN1b8QPxJ6vctAaWxMIVhScKE+uFoweCmdkKrLuJoIfvJadlU6rqT4GcLS9pIdzDbxiIe1J6yJ9ExXH5a6cfbvt9CqFZdYCs1o3JYUeeMKBoH1h8HSGiHUtG6FqoktdFr0RYjlSopJS6SpdSP2NOKUiWUed4JDogmC4zP2/AdNcKL+IgwWLxvxZPvje/byQiESau5FUzag8KtlhlRuw8IvIZAcx8H5xZnbxmAXTyd9wHmk3s3JJvmkzSbEGeoUIKkhOnGWBT/yreXQ+J99v3sCYyuOwLHkn9W/BsxwcDPYsG/Zyfz7/lf8m9g9I8Z+E+2TcdvvlsHJ9061R5YFo8GSkM9SWIdPrdfmzTN+fjbYaICa2kZUld9QpVJkrw29gkQ33kjoEIeDkYdk/jo2fQACwGS218Mq78SoQFZhwbDs36ye5FN0/b7/7qf8HV/+AlppDHxmQgAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Translated API Integration">06d0b65ec39ce6108967b2ddd401314a</action_type>
+        <action_type_parent display_value="Translated API Integration">f4cf6e95c310e2108967b2ddd4013131</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Course Flow">f16ca2d1c310e2108967b2ddd4013151</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>e12ac7ab-bb2d-4b2c-b5ec-549d676e4a81</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-17 20:01:25</sys_created_on>
+        <sys_id>63a47a92c3dce6108967b2ddd4013139</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Training Hub">c10fca5dc35ca2108967b2ddd4013130</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-17 20:01:25</sys_updated_on>
+        <ui_id>41533cff-f76b-4361-b09c-3cfe310c5cd1</ui_id>
+        <values>H4sIAAAAAAAA/51RW2vbMBT+K0XPjrFysd28jZXCYFthXftSgjmWjhOBLLmylDYL+e87sp3Qlj6MvUnfuX2XpyNTkq2ZQJnV+QrF4lpgzrPyOi/quZRymfEFXwqWMAMtUqfEXjjVeWUNgXvQIaLH41eH4FFeWXf10Mn4rHgqgnNofPpm6HSiMan6TsPh8f+mxU5pSRW2ftokrANHzDw6tj5+KPlDh5WGGjUdufdOmS2N/6vg8+DNO8Wf2hAPEdifT1gnIx+eMHz1aCTSyQZ0jwlrwZA+6w5s7V0ggJTLO6MPl46dMp6Wsdj72qs/tLnMsix2NkjaBI7Vy7ea7BxhsbNK4N1IbUA81HqaEVaH1vwcNcQgsIGg/TkIQkJP+7CLpCONiVNzv7Mvv84Hb5UZ9E1FbQXoyw88uVAHj30MJKjf5M33jxmgxpb2Vy10HSFV5+xeDTuJYptuNX3SRtsX4tKrrUlBRD0pWQfpLeE3A/wITkVxP2gNDSfTubdRBPVg1HPAbzF1vsRclkUxW80RZstVU84g58WswEIuSjEvOEd2GqytnkMUNZo02VGNjlLDGP4XIrXHSflp8xerBtJQTQMAAA==</values>
+    </sys_hub_action_instance_v2>
     <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=f16ca2d1c310e2108967b2ddd4013151"/>
-    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=f16ca2d1c310e2108967b2ddd4013151"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=f16ca2d1c310e2108967b2ddd4013151^sys_idNOT IN1003f212c3dce6108967b2ddd40131fb,23a47a92c3dce6108967b2ddd401313a,4403f212c3dce6108967b2ddd40131f8,63a47a92c3dce6108967b2ddd4013137,6fa47a92c3dce6108967b2ddd401313a,9c03f212c3dce6108967b2ddd40131f9,a7a47a92c3dce6108967b2ddd4013138"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">1803f212c3dce6108967b2ddd40131fa</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Course Flow">f16ca2d1c310e2108967b2ddd4013151</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id>72b3f7c5-90ad-455a-bd69-772fe4209ebd</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-17 19:54:05</sys_created_on>
+        <sys_id>1003f212c3dce6108967b2ddd40131fb</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Training Hub">c10fca5dc35ca2108967b2ddd4013130</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-17 20:01:25</sys_updated_on>
+        <ui_id>071656a8-1c5a-4c24-9e2d-c03f550b5752</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">2ba47a92c3dce6108967b2ddd4013139</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Course Flow">f16ca2d1c310e2108967b2ddd4013151</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <parent_ui_id>e12ac7ab-bb2d-4b2c-b5ec-549d676e4a81</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-17 20:01:25</sys_created_on>
+        <sys_id>23a47a92c3dce6108967b2ddd401313a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Training Hub">c10fca5dc35ca2108967b2ddd4013130</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-17 20:01:25</sys_updated_on>
+        <ui_id>8292a547-f608-4f34-ac71-9fab4ae84858</ui_id>
+        <values>H4sIAAAAAAAA/+1VXW/TMBT9K8PPbeQ0TaF7QROo0iRgEpv2Mibrxr5pLVw72M62UvW/c52k28Q2qNAeeavP/Trn5h51y1wbmzaGC3cSgl5adnx1PWLaJox+b5lW7JjVHOp8LnNZTGbFhPPJu2lezYoqn6gCEAo2YhbWSJnSWaWjdlZ0wIjdgGlT4NRGXHpIoaMFaNN6fE9hpUNjYHP55yy50kZ5HNg14Kl3RM+Ot7+F4qZBYaBCQ83Oo9d2SeWHatgXftiLOPrUIS+rS/MID/tJzqtEK+cjhncRrUIaXYMJOGJrsAqi85t7xCOoM2segJW2kdqxlHwX9E/qPSnLlFgjaZTYB++fYlhfD8uV0xLPmkSwRyJUZqiRzrRr+6XXkRaPNbQm7hdPSBuoHzaJdGIxUKrPV+72637gQttO4BA0ToK5f0GkNVRtxJA+DBpcUyOxhqah5YjGuxvdFROXdbY09Mhq425paLq8DGQintGOIFsQ/rGDL8HrpOIztaHinmYFQUvRXSm1i54k7Lq1iB9tItQLHKSIfhuUEKTXTTyhOTc4sN6NhhOfQ1mXOS+fP4/p7JkjeHTd2+00L4tC1vW4fjurxtNilo8rPpdjwrDIuSylyjMhepEiRIhtECKTTuFu9+Zby3mh+FNDvF7j1/DQAUt64qHnF/eCcSZ/MU761Af6hnP+3ziPjaOD6A0waOuG/7NvrtPx9xNCfzcKpQ5E5CJhp/t/kBTY0AFo+Ri6df57kvCA7X4B7yTyNYsGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">0403f212c3dce6108967b2ddd40131f7</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Course Flow">f16ca2d1c310e2108967b2ddd4013151</flow>
+        <flow_variables_assigned>active,currenty_try,retry_count,retry_timeout</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-17 19:54:05</sys_created_on>
+        <sys_id>4403f212c3dce6108967b2ddd40131f8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Training Hub">c10fca5dc35ca2108967b2ddd4013130</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-17 20:01:25</sys_updated_on>
+        <ui_id>349dc43f-227a-4f9c-8073-f28ca6626360</ui_id>
+        <values>H4sIAAAAAAAA/+1ZXWvbMBT9K0VPG8SZ/BHH7p7GRqGwraPL+rIWI0vXqZhjubLcNiv577uynY8lIbCSDjb8Zl193HOPzkG55Imo2pS1qSbqXVXJaUFOv98MiCxsDL+fSMFmQE4J40beAxmQe5bXNkDxW8iqzNn8aiPEb2UuNHTnlEzjdgOanD5tTZl5CUnOUshx50TX8OaM5ZXNIAVGOKV+5rke9wWH0KVRHI5TTwgRUNd3hY/rlpvfLaFtQ7UpcJwqlQMrMKC0sFDogMCjgUIAZsps1gGZsUIwo/R8FdHAxEWRrwO3sjB4HLGLHyv5E8/2PbsuA6yKQzu3GiYdO22Y3yrJ4aI0UiEBxOI3LM27TVzl9az43OK3xELG6twsic06Zrrwh13a6wrzQWlrsiA7xNnXW/VwuQR0Joum/G4yV5zlqxEzRsu0NlDZq6rlZJu7NvRx34VBDjNMm8xYWcpimpRa3csmFRY2G05zHAyzXD0gRKuxob0hVQyRcDY8w/iHJnzFtLSUfMJjcLNN+a2QdzWcW0H44DGf8sDxx5Q5wTgdOdGIuY7gmcgYpV4WeGTR8J/c1baylsiOk6Sh3S6ouJal6URzarCQZcxW3okHvw6twyym1sXJtBpOwXzRCgGb+atr8pi4oY8SDRKjmSxkQoeoGphqZitO2tOvyeCkof31W7JYLAYrk/Fa402ZOW6eb1jN3bWa+2yrnVs4Db2Nz4LgkM+AbfjsfYfuZNKg24+585xcZTm65wL6TM/9keVe0FNrbn731Ppm/oqh3JEPEY19J4QscAIvDhwWxJETsZi6EQu5CP1nGKqrfeWoTX2ja/Q84apGPtfy3lX30cQdHRS32BD3pYV28r6DthdvL+1/RdosDmnoj1xnjLeP0h57TgRj5oxGfuTx8SiMA36Et2JTHi/0YGyksK+Gv/1itPNGzgB/x/0dT/FDnsrojqcmCO6i3nHVGnPvq3/FV9zzIPRo6KT+CJ+MkGVO6kHqxFkWiCwY8zg8nq+WAnlRZ3VJrLdc2prrxrqoZaHtgBrZ72kvDnRCyx/sfTfUd0N9N/Sn3dCW4fquqH/i/suuaEvnfXfUS7zvjo7SHe11Vt8l9f7qu6TjdUkCuKxw0cRScb78x8hOzFHDkm+GHpT+YXldxxa/AOLK3SR7GgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">6ba47a92c3dce6108967b2ddd4013136</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Course Flow">f16ca2d1c310e2108967b2ddd4013151</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Do the following until">eaeb040687210300e6c2c88fc0e3ec89</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-17 20:01:25</sys_created_on>
+        <sys_id>63a47a92c3dce6108967b2ddd4013137</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Training Hub">c10fca5dc35ca2108967b2ddd4013130</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-17 20:01:25</sys_updated_on>
+        <ui_id>e12ac7ab-bb2d-4b2c-b5ec-549d676e4a81</ui_id>
+        <values>H4sIAAAAAAAA/+1UwYrbMBD9laKzMY7dbJbclpaFQtuF7rKXspixJCeisqRKcrJpyL93xpaTpd3Q0ENP9Ul60sx7b/Twntk+uj6GB3sTgloZtvz6lDFlCMP1ninBlqwRUPKmeLuoimpWFcXVrOTlomrxu4LFvGAZM9BJvMmtESoqa+oByNgGdE8HuBQqOA27xxPC10oLLxOrA481UXq23P9yFHdO1hoaqbHwPnplVlh+qbap8N0k7s3HATmvmvgQDxOT9YJkzYoiY/I5SiMkcregg8xYB0ZAtH53RLwEcWf0CVgrE0fLHTwH9QObl/M5XWwlmuRpHsdtnWY1jckqLu8cKRyRCI2eZmh135nPoxGasmyh1/HFlPuA/aQj0aQiSWrv13b7ZSK8VWZwmA615aCPO4g4h6aPMtDLSC07bFR34BxOp3bebtRQjFq6fKVxk7fabpGUIpUDJ+E5zgjyW8TfD/AjeEUuPmEbLD4M7uvvPfGOPpLiejSNFwL3ysUbbLeRSdwhSxEVi1l13Z6LwTV/5bH/RTovkPVbOl+XeiaS5Z8iGX1/aSIL6vU/klMk8QlDPWYueRvI/zqqT5S3kSGMwRGSq4BCHgj7MP106WCHCVD8JbS1/htZOGGHnxPg2OW+BQAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">67a47a92c3dce6108967b2ddd401313a</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Course Flow">f16ca2d1c310e2108967b2ddd4013151</flow>
+        <flow_variables_assigned>integration_status</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <parent_ui_id>8292a547-f608-4f34-ac71-9fab4ae84858</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-17 20:01:25</sys_created_on>
+        <sys_id>6fa47a92c3dce6108967b2ddd401313a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Training Hub">c10fca5dc35ca2108967b2ddd4013130</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-17 20:01:25</sys_updated_on>
+        <ui_id>7e12a1fa-665d-4af8-af32-1b44a639f67a</ui_id>
+        <values>H4sIAAAAAAAA/52PsQ7CMAxE/8VzFtZuHdkrFlQhk6TFIiRV7LSqqv47jgSCFSaf7ux78gapyFSEu9Qy0xihOfcGKFZP9QbkoAEwEPHhVVEUP2YUSvHCglJYsxlDqaFkHQbsjYLL/tXFNtMkrRWadWfAwH7v600mvAb/O+Wg2hFPAdfTH2DnLbEWd5V+fD9ag1XpZL+tJeX7ENLy8fYnQtY6LzIBAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">9403f212c3dce6108967b2ddd40131f9</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Course Flow">f16ca2d1c310e2108967b2ddd4013151</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-17 19:54:05</sys_created_on>
+        <sys_id>9c03f212c3dce6108967b2ddd40131f9</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Training Hub">c10fca5dc35ca2108967b2ddd4013130</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-17 20:01:25</sys_updated_on>
+        <ui_id>72b3f7c5-90ad-455a-bd69-772fe4209ebd</ui_id>
+        <values>H4sIAAAAAAAA/+2UXWvbMBSG/0rwtTH+aMKam1E2CoFthbX0ZivmWDpOxGTJk+SkWfB/35Flp2FNaRm73F30nq/3HD/kEOnOtZ2zd/rKWrFW0fLbQxwJ5TX6fYgUNBgtI6YVF05oVQ5CHG1Bdj6wUg7XBnxoJuxspYA5scX3lMKFbSXs71/PZBshucFxeguGZjg00fLwR8jtWywlVCip4a0zQq2pXHB61SnU2SXLWJEvijxN83cXWbUoqiznBSAUlDcVfpiWmX0alPjFLf080u00SRvubWVpHOGjQ8WRRtcgLcZRA4qD02Z/VAwCv1HySdgI5ahd5JMfrfhFvfP53CfWSDsyDMHjsxxPGGS20YLhTesNBsVBJccapmXXqC9hD398rKGTbjo+KZ2lfth6097FaKm+3ejd12ngtVDDgmNQagby+AJHZ6g6h9Z/GJTYUKOygbal45St0VsxFJOXJllLeiS11Dsa6slK/OfWKqEbQXJN+sdBvgcj/BafqQ0VB5sVWMHKgUJq5wyt0A9nKX923lBYcFylDNegBMuMaN3VgNXouo+fI3xC7+EwONyOJpKAZN9/79K04EOH5yC/rehfMH0J83qepfPzTF8szjF9huaXQc5fAdmf/o0cp2n6H+RTkIUtA5DjbgGMv+X4wUMbJtjADUcmLBm589pq+sf2gT0BINiptNPmh1/hSet/A2D3ZqL7BQAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">afa47a92c3dce6108967b2ddd4013137</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Course Flow">f16ca2d1c310e2108967b2ddd4013151</flow>
+        <flow_variables_assigned>integration_status</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id>e12ac7ab-bb2d-4b2c-b5ec-549d676e4a81</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-17 20:01:25</sys_created_on>
+        <sys_id>a7a47a92c3dce6108967b2ddd4013138</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Training Hub">c10fca5dc35ca2108967b2ddd4013130</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-17 20:01:25</sys_updated_on>
+        <ui_id>cdf5b82d-9c52-4fa8-af5f-62e015c51c35</ui_id>
+        <values>H4sIAAAAAAAA/52PsQ7CMAxE/8VzFtZuHdkrFlQhk6TFIiRV7LSqqv47jgSCFSaf7ux78gapyFSEu9Qy0xihOfcGKFZP9QbkoAEwEPHhVVEUP2YUSvHCglJYsxlDqaFkHQbsjYLL/tXFNtMkrRWadWfAwH7v600mvAb/O+Wg2hFPAdfTH2DnLbEWd5V+fD9ag1XpZL+tJeX7ENLy8fYnQtY6LzIBAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=f16ca2d1c310e2108967b2ddd4013151"/>
-    <sys_hub_flow_variable action="delete_multiple" query="model=f16ca2d1c310e2108967b2ddd4013151"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=f16ca2d1c310e2108967b2ddd4013151^sys_idNOT IN4403f212c3dce6108967b2ddd40131ea,4803f212c3dce6108967b2ddd40131ed,4c03f212c3dce6108967b2ddd40131f0,8403f212c3dce6108967b2ddd40131d9,c003f212c3dce6108967b2ddd40131d3"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=153e8093-6ef4-4294-a498-8a9018a6cd63</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>currenty_try</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>Currenty Try</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Course Flow">f16ca2d1c310e2108967b2ddd4013151</model>
+        <model_id>f16ca2d1c310e2108967b2ddd4013151</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_f16ca2d1c310e2108967b2ddd4013151</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-17 19:54:05</sys_created_on>
+        <sys_id>4403f212c3dce6108967b2ddd40131ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">c10fca5dc35ca2108967b2ddd4013130</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-17 19:54:05</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=a9606351-7f21-4272-8e7a-55382c75694c</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>retry_count</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>Retry Count</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Course Flow">f16ca2d1c310e2108967b2ddd4013151</model>
+        <model_id>f16ca2d1c310e2108967b2ddd4013151</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_f16ca2d1c310e2108967b2ddd4013151</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-17 19:54:05</sys_created_on>
+        <sys_id>4803f212c3dce6108967b2ddd40131ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">c10fca5dc35ca2108967b2ddd4013130</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-17 19:54:05</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=c22e6206-b354-46af-b2eb-9ff4df47c96c</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>retry_timeout</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>Retry TimeOut</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Course Flow">f16ca2d1c310e2108967b2ddd4013151</model>
+        <model_id>f16ca2d1c310e2108967b2ddd4013151</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_f16ca2d1c310e2108967b2ddd4013151</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-17 19:54:05</sys_created_on>
+        <sys_id>4c03f212c3dce6108967b2ddd40131f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">c10fca5dc35ca2108967b2ddd4013130</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-17 19:54:05</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=78257a48-885f-486c-8a26-80762080c947</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>false</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>integration_status</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Integration Status</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Course Flow">f16ca2d1c310e2108967b2ddd4013151</model>
+        <model_id>f16ca2d1c310e2108967b2ddd4013151</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_f16ca2d1c310e2108967b2ddd4013151</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-17 19:54:05</sys_created_on>
+        <sys_id>8403f212c3dce6108967b2ddd40131d9</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">c10fca5dc35ca2108967b2ddd4013130</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-17 20:01:25</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=3e2a30c4-370a-47b5-85a1-dcfdfa002f42</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>false</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>active</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Active</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Course Flow">f16ca2d1c310e2108967b2ddd4013151</model>
+        <model_id>f16ca2d1c310e2108967b2ddd4013151</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_f16ca2d1c310e2108967b2ddd4013151</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-17 19:54:04</sys_created_on>
+        <sys_id>c003f212c3dce6108967b2ddd40131d3</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">c10fca5dc35ca2108967b2ddd4013130</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-17 20:01:25</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>changed_fields</element>
         <help/>
