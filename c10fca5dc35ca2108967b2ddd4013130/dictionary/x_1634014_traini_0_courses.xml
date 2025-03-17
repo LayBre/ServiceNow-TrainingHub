@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="da4f429dc35ca2108967b2ddd4013109" label="Courses" max_length="40" name="x_1634014_traini_0_courses" type="collection">
+        <element choice="3" label="Integration State" max_length="40" name="integration_state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Integrating" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="Start" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Success" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="Failed" sequence="3" value="4"/>
+            </choice>
+        </element>
+        <element label="Description" max_length="4000" name="description" type="string"/>
+        <element label="Integration Message" max_length="4000" name="integration_message" type="string"/>
+        <element label="Translated Description" max_length="4000" name="translated_description" type="string"/>
+        <element display="true" label="Name" max_length="250" name="name" type="string"/>
+    </element>
+</database>

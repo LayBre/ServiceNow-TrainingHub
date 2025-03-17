@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="be4fca5dc35ca2108967b2ddd4013144" sys_domain="global" table="x_1634014_traini_0_courses" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-14 14:46:26</sys_created_on>
+            <sys_id>64df4e9dc35ca2108967b2ddd401315f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1634014_traini_0_courses" sys_domain="global" view="Default view">be4fca5dc35ca2108967b2ddd4013144</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-14 14:46:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>description</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-14 14:46:27</sys_created_on>
+            <sys_id>e0df8e9dc35ca2108967b2ddd401310e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1634014_traini_0_courses" sys_domain="global" view="Default view">be4fca5dc35ca2108967b2ddd4013144</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-14 14:46:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>translated_description</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-14 14:46:27</sys_created_on>
+            <sys_id>68df8e9dc35ca2108967b2ddd401310e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1634014_traini_0_courses" sys_domain="global" view="Default view">be4fca5dc35ca2108967b2ddd4013144</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-14 14:46:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_1634014_traini_0_courses</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-14 14:44:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>be4fca5dc35ca2108967b2ddd4013144</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1634014_traini_0_courses</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Training Hub" source="x_1634014_traini_0">c10fca5dc35ca2108967b2ddd4013130</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Training Hub">c10fca5dc35ca2108967b2ddd4013130</sys_scope>
+            <sys_update_name>sys_ui_section_be4fca5dc35ca2108967b2ddd4013144</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-14 14:44:09</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

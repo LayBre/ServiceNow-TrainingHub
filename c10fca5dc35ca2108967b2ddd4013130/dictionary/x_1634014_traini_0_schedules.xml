@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="693056ddc35ca2108967b2ddd4013176" extends="task" label="Schedules" max_length="40" name="x_1634014_traini_0_schedules" type="collection">
+        <element label="Course" max_length="32" name="course" reference="x_1634014_traini_0_courses" type="reference"/>
+        <element display="true" label="Schedule" max_length="250" name="schedule" type="string"/>
+        <element label="Seats occupied" max_length="40" name="seats_occupied" type="integer"/>
+        <element label="Instructor" max_length="32" name="instructor" reference="sys_user" type="reference"/>
+        <element label="Available Seats" max_length="40" name="available_seats" type="integer"/>
+        <element label="Training Date" max_length="40" name="training_date" type="glide_date_time"/>
+    </element>
+</database>
