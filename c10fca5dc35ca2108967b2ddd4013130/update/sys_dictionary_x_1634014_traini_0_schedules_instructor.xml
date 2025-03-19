@@ -5,7 +5,7 @@
         <attributes/>
         <audit>false</audit>
         <calculation/>
-        <choice>0</choice>
+        <choice/>
         <choice_field/>
         <choice_table/>
         <column_label>Instructor</column_label>
@@ -39,8 +39,10 @@
         <reference_cascade_rule/>
         <reference_floats>false</reference_floats>
         <reference_key/>
-        <reference_qual/>
-        <reference_qual_condition/>
+        <reference_qual>roles=1d0fca5dc35ca2108967b2ddd401315e^EQ</reference_qual>
+        <reference_qual_condition table="sys_user">roles=1d0fca5dc35ca2108967b2ddd401315e^EQ<item endquery="false" field="roles" goto="false" newquery="false" operator="=" or="false" value="1d0fca5dc35ca2108967b2ddd401315e"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </reference_qual_condition>
         <reference_type/>
         <spell_check>false</spell_check>
         <staged>false</staged>
@@ -53,7 +55,7 @@
         <sys_scope display_value="Training Hub">c10fca5dc35ca2108967b2ddd4013130</sys_scope>
         <sys_update_name>sys_dictionary_x_1634014_traini_0_schedules_instructor</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-03-14 14:53:05</sys_updated_on>
+        <sys_updated_on>2025-03-18 18:48:28</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
